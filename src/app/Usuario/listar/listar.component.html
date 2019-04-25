@@ -1,0 +1,31 @@
+<br>
+<div class="container">
+  <div class="card">
+    <button (click)="descargar()" class="btn btn-danger">Descargar</button>
+    <div class="card-header">
+      <h3>Usuarios</h3>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr class="text-center">
+            <th>ID</th>
+            <th>Usuario</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Contraseña</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let usuario of usuarios"  class="text-center">
+            <td>{{usuario.id}}</td>
+            <td>{{usuario.usuario}}</td>
+            <td>{{usuario.nombre}}</td>
+            <td>{{usuario.apellido}}</td>
+            <td>{{usuario.password}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
