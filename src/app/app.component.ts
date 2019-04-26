@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'proyecto';
-  
+  autenticado = false;
+
   constructor(private router:Router){}
 
   Listar(){
@@ -17,5 +18,15 @@ export class AppComponent {
 
   Nuevo(){
     this.router.navigate(["add"]);
+  }
+
+  Login(){
+    this.router.navigate(["login"]);
+  }
+
+  Logout(){
+    window.localStorage.removeItem("token");
+    this.autenticado = false;
+    this.router.navigate(['login']);
   }
 }

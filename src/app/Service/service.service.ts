@@ -20,6 +20,10 @@ export class ServiceService {
     return this.http.post<Usuario>(this.URL,usuario);
   }
 
+  login(credenciales:any){
+    return this.http.post<any>(this.URL+"/login",credenciales)
+  }
+
   getDescargar(){
     return this.http.get(this.urlApi,{
       responseType: 'arraybuffer'

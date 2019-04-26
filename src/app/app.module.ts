@@ -9,6 +9,7 @@ import { FormsModule} from '@angular/forms';
 import { ServiceService } from '../app/Service/service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DescargarComponent } from './Usuario/descargar/descargar.component';
+import { LoginComponent } from './Usuario/login/login.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { DescargarComponent } from './Usuario/descargar/descargar.component';
     AppComponent,
     ListarComponent,
     AddComponent,
-    DescargarComponent
+    DescargarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
