@@ -3,10 +3,10 @@ const express = require('express'),
 
 const app = express();
 
-app.use(express.static('/dist/proyectfront-master'));
+app.use(express.static('/dist/uninorte-proyecto'));
 
 app.get('/*', (req,res)=>{
-    res.sendFile(path.join(__dirname,'/dist/proyectfront-master/index.html'));
+    res.sendFile(path.join(__dirname,'/dist/uninorte-proyecto/index.html'));
 })
 
 app.listen(process.env.PORT || 8080, ()=>{
