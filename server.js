@@ -1,14 +1,11 @@
-const express = require('express'),
-    path = require('path');
+const express = require('express');
+const path = require('path');
 
 const app = express();
 
-app.use(express.static('./dist/uninorte-proyecto'));
+app.use(express.static(__dirname + '/dist/proyecto'));
 
-app.get('/*', (req,res)=>{
-    res.sendFile(path.join(__dirname,'/dist/uninorte-proyecto/index.html'));
-})
-
-app.listen(process.env.PORT || 8080, ()=>{
-    console.log('Server started');
-})
+app.get('/*', function(req,res) {
+    res.sendFile(path.join(__dirname + '/dist/proyecto/index.html'));
+});
+app.listen(process.env.PORT || 8080);
