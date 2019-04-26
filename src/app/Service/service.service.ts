@@ -9,8 +9,8 @@ export class ServiceService {
 
   constructor(private http:HttpClient) { }
 
-  URL = 'http://localhost:8080/usuarios';
-  urlApi = 'http://localhost:8080/usuarios/descargar';
+  URL = 'https://uninorte-api.herokuapp.com/usuarios';
+  urlApi = 'https://uninorte-api.herokuapp.com/usuarios/descargar';
 
   getUsuarios(){
     return this.http.get<Usuario[]>(this.URL);
