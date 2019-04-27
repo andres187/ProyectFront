@@ -24,7 +24,7 @@ export class ServiceService {
   }
 
   getDescargar(){
-    return this.http.get(this.URL+"/descargas",{
+    return this.http.get(this.URL+"/descargar",{
       responseType: 'arraybuffer'
     });
   }
