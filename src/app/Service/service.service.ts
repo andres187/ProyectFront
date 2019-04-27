@@ -9,7 +9,7 @@ export class ServiceService {
 
   constructor(private http:HttpClient) { }
 
-  URL = 'http://app05.aspsols.com:8080/usuarios';
+  URL = 'https://uninorte-api2.herokuapp.com/usuarios';
 
   getUsuarios(){
     return this.http.get<Usuario[]>(this.URL);
