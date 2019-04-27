@@ -9,8 +9,7 @@ export class ServiceService {
 
   constructor(private http:HttpClient) { }
 
-  URL = 'http://localhost:8080/usuarios';
-  urlApi = 'http://localhost:8080/usuarios/descargar';
+  URL = 'http://app05.aspsols.com:8080/usuarios';
 
   getUsuarios(){
     return this.http.get<Usuario[]>(this.URL);
@@ -25,7 +24,7 @@ export class ServiceService {
   }
 
   getDescargar(){
-    return this.http.get(this.urlApi,{
+    return this.http.get(this.URL+"/descargas",{
       responseType: 'arraybuffer'
     });
   }
